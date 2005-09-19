@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - quick two-way blowfish encryption
 Summary(pl):	%{_pearname} - szybkie dwustronne szyfrowanie algorytmem blowfish
 Name:		php-pear-%{_pearname}
-Version:	1.0.0
-Release:	1.1
+Version:	1.0.1
+Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	02858a3c46db133f95a9b18c36f52688
+# Source0-md5:	93873efe07a267b2b415965994a0af98
 URL:		http://pear.php.net/package/Crypt_Blowfish/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	sed >= 4.0
@@ -33,10 +33,18 @@ blowfish. Klasa ta nie wymaga rozszerzenia Mcrypt.
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Group:		Development
+Requires:	%{name} = %{version}-%{release}
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
 %prep
 %pear_package_setup
 
-# bad pear package
+# badly packaged, i think
 sed -i -e 's,Blowfish/DefaultKey.php,Crypt/Blowfish/DefaultKey.php,' ./%{php_pear_dir}/%{_class}/%{_subclass}.php
 
 %install
@@ -46,6 +54,10 @@ install -d $RPM_BUILD_ROOT%{php_pear_dir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/*
 
 %files
 %defattr(644,root,root,755)
