@@ -14,8 +14,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	93873efe07a267b2b415965994a0af98
 URL:		http://pear.php.net/package/Crypt_Blowfish/
-BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	sed >= 4.0
+BuildRequires:	rpm-php-pearprov >= 4.4.2-12
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
