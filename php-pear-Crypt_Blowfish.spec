@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - quick two-way blowfish encryption
-Summary(pl):	%{_pearname} - szybkie dwustronne szyfrowanie algorytmem blowfish
+Summary(pl.UTF-8):   %{_pearname} - szybkie dwustronne szyfrowanie algorytmem blowfish
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
 Release:	2
@@ -29,15 +29,15 @@ work.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Ta klasa pozwala na dwustronne szyfrowanie w locie z uøyciem algorytmu
+%description -l pl.UTF-8
+Ta klasa pozwala na dwustronne szyfrowanie w locie z u≈ºyciem algorytmu
 blowfish. Klasa ta nie wymaga rozszerzenia Mcrypt.
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -46,7 +46,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
