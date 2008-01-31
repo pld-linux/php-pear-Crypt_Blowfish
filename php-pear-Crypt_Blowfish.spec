@@ -8,7 +8,7 @@ Summary:	%{_pearname} - quick two-way blowfish encryption
 Summary(pl.UTF-8):	%{_pearname} - szybkie dwustronne szyfrowanie algorytmem blowfish
 Name:		php-pear-%{_pearname}
 Version:	1.0.1
-Release:	2
+Release:	3
 Epoch:		0
 License:	PHP
 Group:		Development/Languages/PHP
