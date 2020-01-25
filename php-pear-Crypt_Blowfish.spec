@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_class		Crypt
 %define		_subclass	Blowfish
 %define		_status		beta
