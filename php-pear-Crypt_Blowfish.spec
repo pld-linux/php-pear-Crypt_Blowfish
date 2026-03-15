@@ -3,7 +3,7 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 %define		subver	RC2
-%define		rel		2
+%define		rel		3
 Summary:	%{_pearname} - quick two-way blowfish encryption
 Summary(pl.UTF-8):	%{_pearname} - szybkie dwustronne szyfrowanie algorytmem blowfish
 Name:		php-pear-%{_pearname}
